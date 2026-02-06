@@ -1525,3 +1525,21 @@ body.light-mode .hamburger span {
     display: block;
   }
 }
+/* ======================================
+   HAMBURGER COLOR — FINAL THEME FIX
+   ====================================== */
+
+/* DEFAULT (safe fallback) */
+.hamburger span {
+  background-color: #020617;
+}
+
+/* LIGHT MODE → dark lines on light navbar */
+body.light-mode .hamburger span {
+  background-color: #020617 !important;
+}
+
+/* DARK MODE → white lines on dark navbar */
+body:not(.light-mode) .hamburger span {
+  background-color: #ffffff !important;
+}
