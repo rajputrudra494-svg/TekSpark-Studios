@@ -1479,3 +1479,49 @@ body:not(.light-mode) .hamburger span {
 body.light-mode .hamburger span {
   background-color: #020617 !important;
 }
+/* ======================================
+   HAMBURGER ICON — HARD RESET (FINAL)
+   ====================================== */
+
+.hamburger {
+  all: unset; /* resets ALL inherited styles */
+  display: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2000; /* above blur */
+}
+
+.hamburger span {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  height: 3px;
+  border-radius: 2px;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Line positions */
+.hamburger span:nth-child(1) { top: 7px; }
+.hamburger span:nth-child(2) { top: 14px; }
+.hamburger span:nth-child(3) { top: 21px; }
+
+/* Theme-safe colors */
+body:not(.light-mode) .hamburger span {
+  background-color: #ffffff;
+}
+
+body.light-mode .hamburger span {
+  background-color: #020617;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
