@@ -461,6 +461,14 @@ formInputs.forEach(input => {
         this.parentElement.style.transform = 'scale(1)';
     });
 });
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
 
 // ========== INIT ==========
 console.log('%c🚀 Tek Sprak Studios Portfolio Loaded!', 'color: #00D4FF; font-size: 20px; font-weight: bold;');
