@@ -1543,3 +1543,41 @@ body.light-mode .hamburger span {
 body:not(.light-mode) .hamburger span {
   background-color: #ffffff !important;
 }
+/* ===============================
+   HAMBURGER VISIBILITY — FINAL
+   =============================== */
+
+/* Base hamburger shape */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* The 3 lines */
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* LIGHT MODE → DARK LINES */
+body.light-mode .hamburger span {
+  background-color: #020617; /* dark navy */
+}
+
+/* DARK MODE → LIGHT LINES */
+body:not(.light-mode) .hamburger span {
+  background-color: #ffffff;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
