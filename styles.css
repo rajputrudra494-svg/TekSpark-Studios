@@ -1503,3 +1503,51 @@ footer {
     z-index: 10000;
   }
 }
+/* ======================================
+   MOBILE NAV — FORCE OVERLAY MODE
+   ====================================== */
+
+@media (max-width: 768px) {
+
+  /* Lock navbar on top */
+  nav {
+    position: relative;
+    z-index: 100000;
+  }
+
+  /* Turn nav-links into a real overlay */
+  .nav-links {
+    position: fixed !important;
+    top: 64px !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: calc(100vh - 64px) !important;
+
+    background-color: #020617 !important;
+    opacity: 1 !important;
+    backdrop-filter: none !important;
+
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+
+    padding-top: 40px !important;
+    gap: 28px !important;
+
+    z-index: 100001 !important;
+  }
+
+  /* When open */
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  /* Text visibility */
+  .nav-links li a {
+    color: #ffffff !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+  }
+}
