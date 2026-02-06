@@ -1437,3 +1437,46 @@ footer {
     display: flex;
   }
 }
+/* ===============================
+   HAMBURGER MENU (MOBILE ONLY)
+   =============================== */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color, #020617);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
