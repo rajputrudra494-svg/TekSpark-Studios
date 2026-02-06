@@ -1335,3 +1335,63 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* =========================
+   MOBILE PROJECT CARDS — HARD FIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Force single column */
+  .projects-grid,
+  .project-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Card reset */
+  .project-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  /* Image control (THIS was the real issue) */
+  .project-card img {
+    width: 100% !important;
+    height: 180px !important;
+    max-height: 180px !important;
+    object-fit: cover !important;
+  }
+
+  /* Content spacing */
+  .project-content {
+    padding: 16px !important;
+  }
+
+  /* Text hierarchy */
+  .project-title {
+    font-size: 1.2rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .project-description {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    opacity: 0.9;
+  }
+
+  /* Tech stack inline */
+  .tech-stack {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-top: 10px;
+  }
+
+  .tech-stack span {
+    font-size: 0.75rem !important;
+    padding: 6px 10px !important;
+  }
+}
