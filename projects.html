@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Projects - Tek Sprak Studios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="url(#logoGradient)"/>
+                    <path d="M12 14L20 10L28 14V26L20 30L12 26V14Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M20 10V30M12 14L28 26M28 14L12 26" stroke="white" stroke-width="1.5" opacity="0.5"/>
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0A2540"/>
+                            <stop offset="1" stop-color="#00D4FF"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">Tek Sprak Studios</span>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects page-section">
+        <div class="section-header">
+            <div class="section-label">Our Work</div>
+            <h2 class="section-title">Demo Projects</h2>
+            <p class="section-description">Check out our demo projects showcasing our capabilities in modern web development.</p>
+        </div>
+
+        <div class="project-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; max-width: 100%;">
+            <div class="project-card" onclick="window.open('https://softpixel-studio.vercel.app/', '_blank')" style="cursor: pointer;">
+                <div class="project-image">
+                    <div class="project-image-overlay">SoftPixel Studio</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">Vercel</span>
+                    </div>
+                    <h3 class="project-title">SoftPixel Studio</h3>
+                    <p class="project-description">A modern web application showcasing our skills in responsive design, clean code architecture, and user-friendly interfaces. Built with cutting-edge technologies to deliver a seamless user experience.</p>
+                    <a href="https://softpixel-studio.vercel.app/" target="_blank" class="project-link" onclick="event.stopPropagation();">Visit Live Site →</a>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="window.open('https://taste-tranquility.preview.emergentagent.com/', '_blank')" style="cursor: pointer;">
+                <div class="project-image" style="background: linear-gradient(135deg, #2D5A3E, #1B3A28, #0F251A);">
+                    <div class="project-image-overlay">Taste Tranquility</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <h3 class="project-title">Taste Tranquility</h3>
+                    <p class="project-description">An elegant restaurant and culinary experience website featuring beautiful design, smooth animations, and immersive user interactions for showcasing food and ambiance.</p>
+                    <a href="https://taste-tranquility.preview.emergentagent.com/" target="_blank" class="project-link" onclick="event.stopPropagation();">Visit Live Site →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-details">
+            <h3>Project Highlights</h3>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <div class="highlight-icon">⚡</div>
+                    <h4>Lightning Fast</h4>
+                    <p>Optimized for performance with lazy loading and code splitting</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">📱</div>
+                    <h4>Fully Responsive</h4>
+                    <p>Perfect experience across all devices and screen sizes</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">🎨</div>
+                    <h4>Modern Design</h4>
+                    <p>Clean, professional interface with smooth animations</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">🔒</div>
+                    <h4>Secure</h4>
+                    <p>Built with security best practices and modern standards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Want to Build Something Like This?</h2>
+            <p>Let's discuss your project requirements and create something amazing together</p>
+            <a href="contact.html" class="btn-primary">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">Tek Sprak Studios</div>
+                <p class="footer-description">Creating quality digital solutions with passion and dedication.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">API Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Dribbble</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tek Sprak Studios. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

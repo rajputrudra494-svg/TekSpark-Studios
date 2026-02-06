@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tek Sprak Studios - Web & App Development Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="url(#logoGradient)"/>
+                    <path d="M12 14L20 10L28 14V26L20 30L12 26V14Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M20 10V30M12 14L28 26M28 14L12 26" stroke="white" stroke-width="1.5" opacity="0.5"/>
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0A2540"/>
+                            <stop offset="1" stop-color="#00D4FF"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">Tek Sprak Studios</span>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h1>Building Your Digital Vision Into Reality</h1>
+                <p>We're a dedicated team of developers ready to bring your ideas to life with modern web and mobile solutions.</p>
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn-primary">See Our Demo</a>
+                    <a href="contact.html" class="btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-illustration">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">💻</div>
+                        <div class="card-label">Web Development</div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">📱</div>
+                        <div class="card-label">Mobile Apps</div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">🎨</div>
+                        <div class="card-label">UI/UX Design</div>
+                    </div>
+                    <div class="center-circle">
+                        <div class="pulse-ring"></div>
+                        <div class="pulse-ring" style="animation-delay: 0.5s;"></div>
+                        <svg width="120" height="120" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="url(#gradient)" stroke-width="4" stroke-dasharray="314" stroke-dashoffset="0">
+                                <animateTransform
+                                    attributeName="transform"
+                                    attributeType="XML"
+                                    type="rotate"
+                                    from="0 60 60"
+                                    to="360 60 60"
+                                    dur="3s"
+                                    repeatCount="indefinite"/>
+                            </circle>
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0A2540;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="section-header">
+            <div class="section-label">What We Do</div>
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-description">Comprehensive development solutions tailored to your needs</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Web Development</h3>
+                <p>Custom websites and web applications built with modern frameworks and best practices.</p>
+                <ul class="service-features">
+                    <li>Responsive Design</li>
+                    <li>Fast Performance</li>
+                    <li>SEO Optimized</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Mobile Development</h3>
+                <p>Native and cross-platform mobile applications for iOS and Android devices.</p>
+                <ul class="service-features">
+                    <li>React Native</li>
+                    <li>Cross-Platform</li>
+                    <li>Native Performance</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>API Development</h3>
+                <p>Robust backend APIs and database solutions for your applications.</p>
+                <ul class="service-features">
+                    <li>RESTful APIs</li>
+                    <li>Database Design</li>
+                    <li>Secure & Scalable</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>UI/UX Design</h3>
+                <p>Beautiful, intuitive interfaces that provide exceptional user experiences.</p>
+                <ul class="service-features">
+                    <li>User Research</li>
+                    <li>Wireframing</li>
+                    <li>Prototyping</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how we can help bring your ideas to life</p>
+            <a href="contact.html" class="btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">Tek Sprak Studios</div>
+                <p class="footer-description">Creating quality digital solutions with passion and dedication.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">API Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Dribbble</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tek Sprak Studios. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
