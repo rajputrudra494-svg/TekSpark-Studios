@@ -1395,159 +1395,71 @@ footer {
     padding: 6px 10px !important;
   }
 }
-/* ===== HAMBURGER MENU ===== */
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 26px;
-  height: 3px;
-  background: #38bdf8;
-  border-radius: 2px;
-}
-
-/* Mobile nav */
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    background: #020617;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 24px 0;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-/* ===============================
-   HAMBURGER MENU (MOBILE ONLY)
-   =============================== */
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 26px;
-  height: 3px;
-  background: currentColor;
-  border-radius: 2px;
-}
-
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 72px;
-    left: 0;
-    width: 100%;
-    background: var(--bg-color, #020617);
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 24px 0;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-/* ===============================
-   MOBILE NAV VISIBILITY FIX
-   =============================== */
-
-@media (max-width: 768px) {
-
-  .nav-links {
-    background-color: #020617 !important; /* solid background */
-    color: #ffffff;
-    z-index: 9999;
-  }
-
-  .nav-links li a {
-    color: #ffffff;
-    font-size: 1.1rem;
-    opacity: 1 !important;
-  }
-
-  nav {
-    position: relative;
-    z-index: 10000;
-  }
-}
 /* ======================================
-   MOBILE NAV — FORCE OVERLAY MODE
+   MOBILE NAV — GLASS / BLUR MODE
    ====================================== */
 
 @media (max-width: 768px) {
 
-  /* Lock navbar on top */
   nav {
-    position: relative;
-    z-index: 100000;
+    position: sticky;
+    top: 0;
+    z-index: z-index: 1000;
+    backdrop-filter: none;
   }
 
-  /* Turn nav-links into a real overlay */
   .nav-links {
-    position: fixed !important;
-    top: 64px !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: calc(100vh - 64px) !important;
+    position: absolute !important;
+    top: 72px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
 
-    background-color: #020617 !important;
-    opacity: 1 !important;
-    backdrop-filter: none !important;
+    width: calc(100% - 24px) !important;
+    max-width: 420px;
 
     display: none !important;
     flex-direction: column !important;
-    justify-content: flex-start !important;
     align-items: center !important;
+    gap: 18px !important;
 
-    padding-top: 40px !important;
-    gap: 28px !important;
+    padding: 24px 16px !important;
+    border-radius: 16px;
 
-    z-index: 100001 !important;
+    /* GLASS EFFECT */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    z-index: 1001 !important;
   }
 
-  /* When open */
   .nav-links.active {
     display: flex !important;
   }
 
-  /* Text visibility */
+  /* Dark mode */
+  body:not(.light-mode) .nav-links {
+    background: rgba(2, 6, 23, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Light mode */
+  body.light-mode .nav-links {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
   .nav-links li a {
-    color: #ffffff !important;
-    font-size: 1.2rem !important;
-    font-weight: 500 !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
     opacity: 1 !important;
+  }
+
+  body:not(.light-mode) .nav-links li a {
+    color: #ffffff;
+  }
+
+  body.light-mode .nav-links li a {
+    color: #020617;
   }
 }
